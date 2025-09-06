@@ -19,6 +19,14 @@ class Vehiculo extends Model
         'cliente_id',
     ];
 
+    protected $casts = [
+        'placa' => 'string',
+        'marca' => 'string',
+        'modelo' => 'string',
+        'anio_fabricacion' => 'integer',
+        'cliente_id' => 'integer',
+    ];
+
     public function cliente()
     {
         return $this->belongsTo(Cliente::class);

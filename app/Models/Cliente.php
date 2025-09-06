@@ -19,6 +19,14 @@ class Cliente extends Model
         'telefono',
     ];
 
+     protected $casts = [
+        'nombre' => 'string',
+        'apellidos' => 'string',
+        'documento' => 'string',
+        'email' => 'string',
+        'telefono' => 'string',
+    ];
+
     public function vehiculos()
     {
         return $this->hasMany(Vehiculo::class);
